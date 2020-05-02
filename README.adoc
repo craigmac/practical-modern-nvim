@@ -1,0 +1,35 @@
+= Neovim init.vim starter file based on Neil Drew's Modern Vim book
+
+== About
+
+This is a repository containing an init.vim file for use with Neovim 0.2.2+. 
+Vim is not supported, as there are some bits in here that are Neovim-specific.
+This init.vim file was crafted by hand while reading Neil Drew's fantastic book
+[[https://pragprog.com/book/modvim/modern-vim]](Modern Vim: Craft Your 
+Development Environment with Vim 8 and Neovim)
+
+== Installation and Directions 
+
+You will need the following external programs installed for this init.vim to
+work as intended:
+
+* pip3, the python3 package manager for install neovim module;
+* git, for installing minpac plugin manager, and for grepping commands;
+* ripgrep, for grepping commands; 
+* and eslint, for the linting example
+
+=== Preparations
+
+. Have Neovim 0.2.2+ installed
+. Run the following from Bash shell: 
+[source,bash]
+----
+pip3 install --user neovim 
+mkdir -p ~/.config/nvim/pack/minpac/{opt,start} 
+mkdir -p ~/.local/share/nvim/undo 
+git clone https://github.com/k-takata/minpac ~/.config/nvim/pack/opt
+echo 'export PATH=$PATH:~/.config/nvim/pack/minpac/start/fzf/bin' >> ~/.bashrc
+echo 'export FZF_DEFAULT_COMMAND="rg --files"' >> ~/.bashrc 
+source ~/.bashrc
+----
+. Open Neovim and run healthcheck command: 
