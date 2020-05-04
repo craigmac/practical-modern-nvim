@@ -1,12 +1,6 @@
-" Title: Modern Vim Configuration base
-" Summary: A init.vim file for Neovim 0.2+ based on the
-" suggestions found in 'Modern Vim' by Drew Neil.
-"
-" For compatibility with Vim 8 uncomment these lines
-"set runtimepath^=~/.vim runtimepath+=~/.vim/after
-"let &packpath = &runtimepath
-
+" Modern Vim by Drew Neil {{{
 packadd minpac
+
 call minpac#init()
 call minpac#add('k-takata/minpac', {'type': 'opt'})
 call minpac#add('tpope/vim-unimpaired')
@@ -130,3 +124,26 @@ function! s:hardwrap() abort
     break
   endfor
 endfunction
+"}}}
+
+" 'Practical Vim' by Drew Neil {{{
+call minpac#add('tpope/vim-commentary')
+call minpac#add('kana/vim-textobj-entire')
+call minpac#add('tpope/vim-rails')
+
+set nrformats=
+set wildmode=longest,list
+set hidden
+set mouse=a
+
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
+
+cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
+
+" continue at page 102
+" w !sudo tee % > /dev/null
+" }}}
+
+" vimcasts.org by Drew Neil {{{
+" }}}

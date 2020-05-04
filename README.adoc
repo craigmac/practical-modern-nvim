@@ -1,12 +1,12 @@
-= Neovim init.vim starter file based on Neil Drew's Modern Vim book
+= Neovim starter file based on Neil Drew's books
 
 == About
 
 This is a repository containing an init.vim file for use with Neovim 0.2.2+. 
 Vim is not supported, as there are some bits in here that are Neovim-specific.
-This init.vim file was crafted by hand while reading Neil Drew's fantastic book
-[[https://pragprog.com/book/modvim/modern-vim]](Modern Vim: Craft Your 
-Development Environment with Vim 8 and Neovim)
+This init.vim file was crafted by hand while reading Neil Drew's fantastic
+book https://pragprog.com/book/modvim/modern-vim[Modern Vim: Craft Your 
+Development Environment with Vim 8 and Neovim]
 
 == Installation and Directions 
 
@@ -32,4 +32,3 @@ echo 'export PATH=$PATH:~/.config/nvim/pack/minpac/start/fzf/bin' >> ~/.bashrc
 echo 'export FZF_DEFAULT_COMMAND="rg --files"' >> ~/.bashrc 
 source ~/.bashrc
 ----
-. Open Neovim and run healthcheck command: 
